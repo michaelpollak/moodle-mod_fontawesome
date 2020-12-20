@@ -1,0 +1,10 @@
+{
+  "name": "moodle-atto_fontawesome-button",
+  "builds": {
+    "moodle-atto_fontawesome-button": {
+      "jsfiles": [
+        "button.js"
+      ]
+    }
+  }
+}
