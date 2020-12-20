@@ -29,7 +29,12 @@ $ADMIN->add('editoratto', new admin_category('atto_fontawesome', new lang_string
 $settings = new admin_settingpage('atto_fontawesome_settings', new lang_string('settings', 'atto_fontawesome'));
 if ($ADMIN->fulltree) {
 
-    $default = 'camera-retro, exclamation-circle, pencil';
+    $default = 'envelope-o, user-circle, user-circle-o, user-o, handshake-o, calculator, caret-square-o-right, comment-o, ';
+    $default .= 'comments-o, eye, bolt, graduation-cap, thumbs-o-up, hourglass-half, film, pencil-square-o, calendar, check-square-o, ';
+    $default .= 'handshake-o, inbox, plus-square-o, wrench, smile-o, bomb, hand-o-right, hand-o-left, user, paperclip, floppy-o, ';
+    $default .= 'file-text-o, arrow-circle-o-left, arrow-circle-o-right, arrow-circle-o-up, arrow-circle-o-down, caret-square-o-down, ';
+    $default .= 'caret-square-o-up, youtube-play, rocket, thumbs-o-down, lightbulb-o, info, gift exclamation, exclamation-circle, cogs, ';
+    $default .= 'bullhorn, users, download, folder-o, folder-open-o, headphones, hourglass-half, lightbulb-o, save, sun-o, thumbs-up, thumbs-down, users, user';
     $settings->add(
         new admin_setting_configtextarea('atto_fontawesome/icons',
                 'FontAwesome', 'Add the icons you want your users to see.', $default, PARAM_TEXT));
