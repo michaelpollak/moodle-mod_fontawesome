@@ -47,20 +47,8 @@ function atto_fontawesome_params_for_js($elementid, $options, $fpoptions) {
     $icons = array();
 
     foreach ($setting as $i => &$icon) {
-        $icons[$i]['text'] = '&nbsp;<class class="fa fa-' . $icon . '"></class>&nbsp;'; // This is the code that gets inserted.
-        $icons[$i]['icon'] = '<class class="fa fa-' . $icon . '"></class>';   // This is the image graphic for display
-    }
-
-    $count = count($setting);
-    foreach ($setting as $i => &$icon) {
-        $icons[$count + $i]['text'] = '&nbsp;<class class="fa fa-' . $icon . ' fa-2x"></class>&nbsp;'; // This is the code that gets inserted.
-        $icons[$count + $i]['icon'] = '<class class="fa fa-' . $icon . ' fa-2x"></class>';
-    }
-
-    $count = 2 * count($setting);
-    foreach ($setting as $i => &$icon) {
-        $icons[$count + $i]['text'] = '&nbsp;<class style="color:red" class="fa fa-' . $icon . ' fa-2x"></class>&nbsp;'; // This is the code that gets inserted.
-        $icons[$count + $i]['icon'] = '<class style="color:red" class="fa fa-' . $icon . ' fa-2x"></class>';
+        $icons[$i]['text'] = '<class class="fa fa-' . $icon . '"></class>&nbsp;'; // This is the code that gets inserted.
+        $icons[$i]['icon'] = '<class class="fa fa-' . $icon . ' fa-2x"></class>';   // This is the image graphic for display
     }
 
     return array(
