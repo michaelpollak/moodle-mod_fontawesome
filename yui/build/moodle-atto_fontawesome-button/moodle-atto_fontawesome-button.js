@@ -68,8 +68,9 @@ Y.namespace('M.atto_fontawesome').Button = Y.Base.create('button', Y.M.editor_at
 
     initializer: function() {
         this.addButton({
-            // Define the logo here, I feel a paintbrush looks cool.
-            icon: 'e/text_color_picker',
+            // Define the logo here.
+            icon: 'icon',
+            iconComponent: 'atto_fontawesome',
             callback: this._displayDialogue
         });
     },
