@@ -47,17 +47,22 @@ function atto_fontawesome_params_for_js($elementid, $options, $fpoptions) {
     $icons = array();
 
     foreach ($setting as $i => &$icon) {
-        $icons[$i]['text'] = '<class class="fa fa-' . $icon . '"></class>'; // This is the code that gets inserted.
-        $icons[$i]['icon'] = '<class class="fa fa-' . $icon . '  fa-2x"></class>';
-        // This is the image graphic for the display, keep separated in case we need it later.
+        $icons[$i]['text'] = '&nbsp;<class class="fa fa-' . $icon . '"></class>&nbsp;'; // This is the code that gets inserted.
+        $icons[$i]['icon'] = '<class class="fa fa-' . $icon . '"></class>';   // This is the image graphic for display
     }
-/*
-$icons = array();
-$icons[0]['text'] = '<i class="fa fa-pencil"></i>'; // This is the code that gets inserted.
-$icons[1]['text'] = '<i class="fa fa-pencil"></i>'; // This is the code that gets inserted.
-$icons[0]['image'] = '<i class="fa fa-pencil"></i>'; // This is the code that gets inserted.
-$icons[1]['image'] = '<i class="fa fa-pencil"></i>'; // This is the code that gets inserted.
-*/
+
+    $count = count($setting);
+    foreach ($setting as $i => &$icon) {
+        $icons[$count + $i]['text'] = '&nbsp;<class class="fa fa-' . $icon . ' fa-2x"></class>&nbsp;'; // This is the code that gets inserted.
+        $icons[$count + $i]['icon'] = '<class class="fa fa-' . $icon . ' fa-2x"></class>';
+    }
+
+    $count = 2 * count($setting);
+    foreach ($setting as $i => &$icon) {
+        $icons[$count + $i]['text'] = '&nbsp;<class style="color:red" class="fa fa-' . $icon . ' fa-2x"></class>&nbsp;'; // This is the code that gets inserted.
+        $icons[$count + $i]['icon'] = '<class style="color:red" class="fa fa-' . $icon . ' fa-2x"></class>';
+    }
+
     return array(
         'fontawesomes' =>  $icons
     );
